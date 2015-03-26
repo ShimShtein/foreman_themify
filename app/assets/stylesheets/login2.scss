@@ -1,0 +1,14 @@
+@import "mixin";
+@import "colors";
+
+.login-page #brand img {
+  display: block;
+  height: 184px;
+  margin: 0;
+  max-width: 100%;
+}
+.login-page {
+  background: red;
+  background-size: auto;
+  color: #fff;
+}

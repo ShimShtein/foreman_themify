@@ -1,62 +1,44 @@
-# ForemanPluginTemplate
+# ForemanThemify
 
-This repo is an example plugin which you can use as a starting point for developing
-your own Foreman plugins
+*Introdction here*
 
-## Getting Started
+This is my frst attempt to create a theme for Foreman.
+It knows to inject its assets before the core ones, so
+if it an asset with the same name exists both in core and
+in the plugin - plugin's one will be used.
+This concept allows us to replace images, javascript files and
+css files completely.
 
-First, clone this repo to a directory named for your new plugin
+Two issues that need fixing in Foreman core:
 
-    git clone https://github.com/theforeman/foreman_plugin_template foreman_my_plugin
+1. Documentation - it needs some changes in the core. Probably a specific helper, that could be 
+overriden in the plugin. See [eLobato's PR](https://github.com/theforeman/foreman/pull/2212), look 
+for ```documentation_button```
 
-Now use the provided script to rewrite all the files in the plugin
+2. Adding plugin's assets as child assets. If all a plugin wants is not a complete replacement 
+of the asset, but just adding functionality to the existing one (as in ```*= require_tree```)
+the core should create an extension point. See [stackoverflow question about it](http://stackoverflow.com/questions/8448838/how-can-i-dynamically-require-assets-in-the-rails-3-1-asset-pipeline)
 
-    cd foreman_my_plugin
-    ./rename.rb foreman_my_plugin
+## Installation
 
-The script will also output the required Bundler line to add the plugin to Foreman.
-Apply this change, and restart Foreman
+See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
+for how to install Foreman plugins
 
-Once working, update the README with appropriate information, and publish your plugin!
+## Usage
 
-## Out of the box functionality
+*Usage here*
 
-This example plugin comes with:
+## TODO
 
-* A model and helper concern
-* An inherited controller
-* A route/view which displays the plugin name
-* A widget for the Dashboard
-* A plugin registration block adding permissions/roles/menu entry
-* A functioning example rake task
-* A functioning example test and factory
-* Functioning internationalization support
+*Todo list here*
 
-These examples show how to add to Foreman in various ways.
+## Contributing
 
-### i18n
-
-From your Foreman checkout, run `rake plugin:gettext[foreman_plugin_example]` to
-extract the latest strings, and then inside the plugin checkout run `make -C locale
-tx-update` to pull and merge in the latest translations.  Do this regularly and
-before each release.
-
-Have your .pot file published in Foreman's Transifex project by contacting the
-development team below.
-
-[Translating](http://projects.theforeman.org/projects/foreman/wiki/Translating#Translating-for-developers)
-has more information about writing code with i18n support.
-
-## Getting help
-
-The Foreman developers IRC channel and mailing list are the best places to get help:
-
-* Freenode: #theforeman-dev
-* Google Groups: foreman-dev@googlegroups.com
+Fork and send a Pull Request. Thanks!
 
 ## Copyright
 
-Copyright (c) 2014 Red Hat
+Copyright (c) *year* *your name*
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -70,3 +52,4 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+

@@ -1,16 +1,16 @@
-require File.expand_path('../lib/foreman_plugin_template/version', __FILE__)
+require File.expand_path('../lib/foreman_themify/version', __FILE__)
 require 'date'
 
 Gem::Specification.new do |s|
-  s.name        = "foreman_plugin_template"
-  s.version     = ForemanPluginTemplate::VERSION
+  s.name        = "foreman_themify"
+  s.version     = ForemanThemify::VERSION
   s.date        = Date.today.to_s
   s.authors     = ["TODO: Your name"]
   s.email       = ["TODO: Your email"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ForemanPluginTemplate."
+  s.summary     = "TODO: Summary of ForemanThemify."
   # also update locale/gemspec.rb
-  s.description = "TODO: Description of ForemanPluginTemplate."
+  s.description = "TODO: Description of ForemanThemify."
 
   s.files = Dir["{app,config,db,lib,locale}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
